@@ -172,15 +172,36 @@ const Index = () => {
 
   if (currentStep === 'landing') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 p-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8 animate-fade-in">
-            <GraduationCap className="w-16 h-16 mx-auto mb-4 text-blue-600" />
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Kompatibilitas Pendidikan</h1>
-            <p className="text-xl text-gray-600">Temukan jenjang pendidikan yang tepat untuk masa depanmu</p>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-green-400 via-green-500 to-green-600 text-white py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <GraduationCap className="w-20 h-20 mx-auto mb-6 text-white opacity-90" />
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                LAYANAN <br />
+                PENEMPATAN DAN <br />
+                PENYALURAN <br />
+                LULUS SMP
+              </h1>
+              <p className="text-xl md:text-2xl text-green-50 mb-8 font-light">
+                Temukan jenjang pendidikan yang tepat untuk masa depanmu
+              </p>
+            </div>
+            
+            <Button 
+              onClick={() => setCurrentStep('registration')} 
+              size="lg" 
+              className="bg-white text-green-600 hover:bg-green-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Mulai Quiz Sekarang
+            </Button>
           </div>
+        </div>
 
-          {/* New detailed explanation section */}
+        {/* Content Section */}
+        <div className="max-w-4xl mx-auto px-4 py-12">
+          {/* Detailed explanation section */}
           <Card className="mb-8 animate-scale-in">
             <CardHeader>
               <CardTitle className="text-2xl text-center text-blue-700">Mengapa Pemilihan Jalur Pendidikan Penting?</CardTitle>
@@ -240,6 +261,7 @@ const Index = () => {
             </CardContent>
           </Card>
 
+          {/* ... keep existing code (Quiz info card) */}
           <Card className="mb-8 animate-scale-in">
             <CardHeader>
               <CardTitle className="text-2xl text-center text-blue-700">Apa itu Quiz Kompatibilitas Pendidikan?</CardTitle>
@@ -288,16 +310,6 @@ const Index = () => {
               </div>
             </CardContent>
           </Card>
-
-          <div className="text-center">
-            <Button 
-              onClick={() => setCurrentStep('registration')} 
-              size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Mulai Quiz Sekarang
-            </Button>
-          </div>
         </div>
       </div>
     );
