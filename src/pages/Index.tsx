@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, GraduationCap, Building, BookOpen, User, Mail, Calendar } from 'lucide-react';
+import { CheckCircle, GraduationCap, Building, BookOpen, User, Mail, Calendar, Info, Target, Users } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 interface StudentInfo {
@@ -179,6 +179,66 @@ const Index = () => {
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Quiz Kompatibilitas Pendidikan</h1>
             <p className="text-xl text-gray-600">Temukan jenjang pendidikan yang tepat untuk masa depanmu</p>
           </div>
+
+          {/* New detailed explanation section */}
+          <Card className="mb-8 animate-scale-in">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center text-blue-700">Mengapa Pemilihan Jalur Pendidikan Penting?</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  Masa Sekolah Menengah Pertama (SMP) merupakan periode transisi penting dalam kehidupan remaja. 
+                  Peralihan dari jenjang SMP ke jenjang pendidikan selanjutnya merupakan tahapan krusial dalam kehidupan siswa. 
+                  Keputusan pemilihan sekolah menengah atas (SMA) atau sekolah menengah kejuruan (SMK), serta jalur pendidikan 
+                  alternatif lainnya, mempengaruhi masa depan akademik dan karier mereka.
+                </p>
+                
+                <p>
+                  Sayangnya, siswa SMP seringkali menghadapi berbagai tantangan dalam proses pengambilan keputusan ini. 
+                  Kurangnya informasi yang komprehensif dan mudah diakses tentang berbagai pilihan pendidikan, persyaratan 
+                  pendaftaran, dan peluang karier yang tersedia menjadi kendala utama. Banyak siswa dan orang tua merasa 
+                  kebingungan dalam memilih jalur pendidikan yang sesuai dengan minat, bakat, dan kemampuan siswa. Akibatnya, 
+                  terdapat risiko siswa memilih jalur pendidikan yang tidak sesuai, berdampak pada prestasi akademik dan 
+                  kepuasan belajar mereka.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+                  <div className="flex items-center mb-3">
+                    <Info className="w-6 h-6 text-blue-600 mr-2" />
+                    <h3 className="font-semibold text-blue-800">Memberikan Informasi yang Komprehensif</h3>
+                  </div>
+                  <p className="text-blue-700 text-sm">
+                    Menyediakan informasi yang mudah diakses tentang berbagai pilihan pendidikan
+                  </p>
+                </div>
+
+                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+                  <div className="flex items-center mb-3">
+                    <Users className="w-6 h-6 text-green-600 mr-2" />
+                    <h3 className="font-semibold text-green-800">Memberikan Bimbingan Karir</h3>
+                  </div>
+                  <p className="text-green-700 text-sm">
+                    Memberikan panduan untuk membantu siswa dalam mengeksplorasi minat dan bakat mereka, 
+                    serta merencanakan karir di masa depan
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+                  <div className="flex items-center mb-3">
+                    <Target className="w-6 h-6 text-purple-600 mr-2" />
+                    <h3 className="font-semibold text-purple-800">Meningkatkan Kesesuaian Pilihan</h3>
+                  </div>
+                  <p className="text-purple-700 text-sm">
+                    Membantu siswa dalam memilih jalur pendidikan yang sesuai dengan minat dan kemampuan mereka, 
+                    sehingga meningkatkan peluang keberhasilan dan kepuasan belajar
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           <Card className="mb-8 animate-scale-in">
             <CardHeader>
