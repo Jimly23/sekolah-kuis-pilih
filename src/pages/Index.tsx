@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, GraduationCap, Building, Mosque, User, Mail, Calendar } from 'lucide-react';
+import { CheckCircle, GraduationCap, Building, BookOpen, User, Mail, Calendar } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 interface StudentInfo {
@@ -210,7 +209,7 @@ const Index = () => {
                 </div>
                 
                 <div className="flex items-center space-x-3 p-4 bg-purple-50 rounded-lg">
-                  <Mosque className="w-8 h-8 text-purple-600" />
+                  <BookOpen className="w-8 h-8 text-purple-600" />
                   <div>
                     <h3 className="font-semibold text-purple-800">MA</h3>
                     <p className="text-sm text-purple-600">Pendidikan umum + agama</p>
@@ -350,7 +349,7 @@ const Index = () => {
               <div className="flex items-center gap-2 mb-2">
                 {currentQuestion.category === 'SMK' && <Building className="w-5 h-5 text-blue-600" />}
                 {currentQuestion.category === 'SMA' && <GraduationCap className="w-5 h-5 text-green-600" />}
-                {currentQuestion.category === 'MA' && <Mosque className="w-5 h-5 text-purple-600" />}
+                {currentQuestion.category === 'MA' && <BookOpen className="w-5 h-5 text-purple-600" />}
                 <span className="text-sm font-medium text-gray-500">
                   Kategori: {currentQuestion.category}
                 </span>
@@ -406,7 +405,7 @@ const Index = () => {
               <div className="flex justify-center mt-4">
                 {recommendation === 'SMK' && <Building className="w-12 h-12 text-blue-600" />}
                 {recommendation === 'SMA' && <GraduationCap className="w-12 h-12 text-green-600" />}
-                {recommendation === 'MA' && <Mosque className="w-12 h-12 text-purple-600" />}
+                {recommendation === 'MA' && <BookOpen className="w-12 h-12 text-purple-600" />}
               </div>
             </CardHeader>
             <CardContent>
@@ -446,7 +445,7 @@ const Index = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="flex items-center gap-2">
-                      <Mosque className="w-4 h-4 text-purple-600" />
+                      <BookOpen className="w-4 h-4 text-purple-600" />
                       MA
                     </span>
                     <span className="font-medium">{scores.MA}/10</span>
